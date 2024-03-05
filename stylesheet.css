@@ -1,0 +1,282 @@
+@font-face {
+  font-family: "Gotham";
+  src: url("gotham/GothamBook.ttf");
+}
+
+@font-face {
+  font-family: "Gotham-Bold";
+  src: url("gotham/Gotham-Bold.otf");
+}
+
+body {
+  font-family: 'Gotham', sans-serif;
+  padding: 0;
+  width: 80%;
+  margin: auto;
+}
+
+header {
+  font-family: 'Gotham-Bold', sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+header span {
+  color: #114a8d;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  margin: 2rem;
+  margin-top: 0;
+  gap: 0.5rem 0;
+}
+
+.card {
+  width: 100%;
+  background-color: #ecf0f1;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  border-radius: 8px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card h2 {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1));
+  margin-bottom: 0;
+  padding: 5rem 0 1.3rem 0;
+  border-radius: 8px;
+  font-size: 2rem;
+  line-height: 2.3rem;
+}
+
+.card .text {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.4s;
+}
+
+.text-col {
+  color: #ffc758;
+}
+
+
+.card:nth-child(1) {
+  background-image: url('Assets/img1.png');
+  width: 90%;
+  aspect-ratio: 8/5;
+}
+
+.card:nth-child(2) {
+  background-image: url('Assets/img2.png');
+  width: 90%;
+  aspect-ratio: 8/5;
+}
+
+.card:nth-child(3) {
+  background-image: url('Assets/img3.png');
+  width: 90%;
+  aspect-ratio: 8/5;
+}
+
+.card:nth-child(4) {
+  background-image: url('Assets/img4.png');
+  width: 90%;
+  aspect-ratio: 8/5;
+}
+
+
+.additional-info {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #114a8dcc;
+  color: #fff;
+  margin: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  transform: translate(-100%, 100%);
+  transition: transform 0.4s;
+}
+
+.card .additional-info h3 {
+  font-size: 2rem;
+  margin-bottom: 0;
+  padding: 2rem;
+  padding-bottom: 0;
+  line-height: 2.3rem;
+}
+
+.card .additional-info p {
+  padding: 2rem;
+  padding-top: 0;
+}
+
+
+.card:hover .additional-info h3,
+.card:hover .additional-info p {
+  animation: 1.3s anim-lineUp ease-out;
+}
+
+.card:hover .additional-info {
+  transform: translate(0, 0);
+}
+
+.card:hover .text,
+.card:hover .text .text-col {
+  color: transparent;
+}
+
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+
+
+@media screen and (max-width: 1450px) {
+  body {
+    width: 90%;
+  }
+
+  header {
+    font-size: 1.2rem;
+  }
+
+  .card h2,
+  .card .additional-info h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .card .additional-info {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body {
+    width: 90%;
+  }
+
+  header {
+    font-size: 1.5rem;
+  }
+
+  .card h2,
+  .card .additional-info h3 {
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+
+  .card .additional-info {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    width: 100%;
+  }
+
+  .cards-container {
+    margin: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  header {
+    font-size: 1.2rem;
+  }
+
+  .card h2,
+  .card .additional-info h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .card .additional-info {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .cards-container {
+    margin: 2rem 0.5rem;
+  }
+
+  header {
+    font-size: 1.1rem;
+  }
+
+  .card h2,
+  .card .additional-info h3 {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+
+  .card .additional-info {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .cards-container {
+    margin: 2rem 0.3rem;
+  }
+
+  header {
+    font-size: 1rem;
+  }
+
+  .card h2,
+  .card .additional-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .card .additional-info {
+    font-size: 0.8rem;
+  }
+}
